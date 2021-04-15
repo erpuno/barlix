@@ -63,17 +63,17 @@ defmodule Barlix.PNG do
       mode: {:grayscale, 8}
     }
 
-    png = :png.create(Enum.into(options, png_options))
+    png = :png2.create(Enum.into(options, png_options))
     margin_row = map_seq(width, fn _ -> @white end)
-    append_margin_row = fn _ -> :png.append(png, {:row, margin_row}) end
+    append_margin_row = fn _ -> :png2.append(png, {:row, margin_row}) end
     _ = map_seq(margin, append_margin_row)
 
     Enum.each(1..height, fn _ ->
-      :png.append(png, {:row, row})
+      :png2.append(png, {:row, row})
     end)
 
     _ = map_seq(margin, append_margin_row)
-    :png.close(png)
+    :png2.close(png)
   end
 
   defp map_seq(size, callback) do

@@ -5,7 +5,7 @@ defmodule Barlix.Mixfile do
 
   def project do
     [
-      app: :barlix,
+      app: :barlix2,
       version: @version,
       elixir: "~> 1.5",
       build_embedded: Mix.env() == :prod,
@@ -19,12 +19,12 @@ defmodule Barlix.Mixfile do
   end
 
   def application do
-    [applications: [:logger, :png]]
+    [applications: [:logger, :png2]]
   end
 
   defp deps do
     [
-      {:png, "~> 0.1"},
+      {:png2, "~> 1.0.0"},
       {:ex_doc, "~> 0.20.2", only: :dev},
       {:mix_test_watch, "~> 0.2", only: :dev},
       {:tempfile, "~> 0.1.0", only: :test},
@@ -36,14 +36,14 @@ defmodule Barlix.Mixfile do
   defp package do
     %{
       licenses: ["MIT"],
-      links: %{"Github" => "https://github.com/ananthakumaran/barlix"},
+      links: %{"Github" => "https://github.com/erpuno/barlix2"},
       maintainers: ["ananthakumaran@gmail.com"]
     }
   end
 
   defp docs do
     [
-      source_url: "https://github.com/ananthakumaran/barlix",
+      source_url: "https://github.com/erpuno/barlix2",
       source_ref: "v#{@version}",
       main: Barlix,
       extras: ["README.md"]
