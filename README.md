@@ -1,7 +1,5 @@
 # Barlix
 
-![BARLIX](https://raw.githubusercontent.com/ananthakumaran/barlix/master/media/logo.png "BARLIX")
-
 [![Hex.pm](https://img.shields.io/hexpm/v/barlix.svg)](https://hex.pm/packages/barlix)
 
 Barcode generator for Elixir
